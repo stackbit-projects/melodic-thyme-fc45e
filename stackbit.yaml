@@ -1,0 +1,150 @@
+stackbitVersion: ~0.3.0
+ssgName: jekyll
+publishDir: _site
+dataDir: _data
+pagesDir: ''
+models:
+  journal:
+    type: page
+    label: Journal
+    folder: _journals
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: author
+        label: Author
+  note:
+    type: page
+    label: Note
+    folder: _notes
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: tags
+        label: Tags
+      - type: boolean
+        name: curated
+        label: Curated
+  page:
+    type: page
+    label: Page
+    folder: _pages
+    match:
+      - about.md
+      - dates.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: content-type
+        label: Content Type
+      - type: boolean
+        name: author
+        label: Author
+  page_1:
+    type: page
+    label: Page 1
+    match:
+      - _pages/archive.md
+      - _pages/categories.md
+      - _pages/tags.md
+      - index.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: content-type
+        label: Content Type
+  page_2:
+    type: page
+    label: Page 2
+    folder: _pages
+    match:
+      - journals.md
+      - notes.md
+      - posts.md
+    fields:
+      - type: string
+        name: layout
+        label: Layout
+      - type: string
+        name: permalink
+        label: Permalink
+      - type: string
+        name: title
+        label: Title
+  post:
+    type: page
+    label: Post
+    folder: _posts
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: string
+        name: tags
+        label: Tags
+      - type: boolean
+        name: toc
+        label: Toc
+      - type: boolean
+        name: comments
+        label: Comments
+      - type: string
+        name: categories
+        label: Categories
+  wander_notebook:
+    type: page
+    label: Wander Notebook
+    folder: _posts/wander_notebook
+    match: '*'
+    fields:
+      - type: string
+        name: title
+        label: Title
+      - type: date
+        name: date
+        label: Date
+      - type: string
+        name: author
+        label: Author
+      - type: string
+        name: layout
+        label: Layout
+      - type: list
+        name: tags
+        label: Tags
+        items:
+          type: string
+      - type: string
+        name: category
+        label: Category
+      - type: image
+        name: avatar
+        label: Avatar
+      - type: list
+        name: categories
+        label: Categories
+        items:
+          type: string
